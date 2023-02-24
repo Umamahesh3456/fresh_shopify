@@ -20,5 +20,5 @@ EXPOSE ${SERVICE_PORT}
 # an cmd argument to take the artifact name as command line arguement.
 #CMD ["bash", "-c"]
 #ENTRYPOINT ["bash","-c", "java -jar ${ARTIFACT_NAME_ENV}" ]
-CMD ["bash","-c", "java -jar ${ARTIFACT_NAME}" ]
+CMD ["bash","-c", "java -jar ${ARTIFACT_NAME}"]
 
