@@ -2,7 +2,7 @@
 FROM openjdk:11
 
 ARG WORKING_DIR=/opt/weshopify-backend-app
-ARG ARTIFACT_NAME=weshopify-platform-backend.jar
+ENV ARTIFACT_NAME=weshopify-platform-backend.jar
 ARG SERVICE_PORT=8082
 
 ENV ARTIFACT_NAME_ENV=${ARTIFACT_NAME}
@@ -20,5 +20,5 @@ EXPOSE ${SERVICE_PORT}
 # an cmd argument to take the artifact name as command line arguement.
 #CMD ["bash", "-c"]
 #ENTRYPOINT ["bash","-c", "java -jar ${ARTIFACT_NAME_ENV}" ]
-CMD ["bash","-c", "java -jar ${ARTIFACT_NAME_ENV}" ]
+CMD ["bash","-c", "java -jar ${ARTIFACT_NAME}" ]
 
